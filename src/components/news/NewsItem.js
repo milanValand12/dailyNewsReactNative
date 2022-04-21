@@ -27,12 +27,12 @@ const NewsItem = ({item}) => {
       )}
       <Text style={styles.text}>{item.title}</Text>
       <View style={styles.row}>
-        {item.author && (
+        {item.author ? (
           <Text style={styles.subtext}>Author: {item.author}</Text>
-        )}
-        {item.publishedAt && (
+        ) : null}
+        {item.publishedAt ? (
           <Text style={styles.subtext}>Published At: {item.publishedAt}</Text>
-        )}
+        ) : null}
       </View>
     </TouchableOpacity>
   );
